@@ -1,0 +1,17 @@
+# Dependencias del generador de las presentaciones.
+# Se reinstalan con:  cd presentaciones/_generador && npm install
+node_modules/
+
+# Salidas temporales de la revisión visual
+revision/
+*.pdf.tmp
+
+# Sistema
+.DS_Store
+.claude/
+__pycache__/
+.ipynb_checkpoints/
+
+# La carpeta docente/ (guiones y solucionario) no se publica: el solucionario
+# es la pauta completa de la tarea evaluada y este repo es público.
+docente/
