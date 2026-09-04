@@ -17,6 +17,10 @@ desde **Groq**, que es gratuito y no pide tarjeta de crédito.
 | **Plantilla de la tarea** | Entrega | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Giocrisrai/taller-ia-agentes-biblioteca/blob/main/notebooks/03_Tarea_Plantilla.ipynb) |
 | **Solucionario** *(docente)* | Corrección | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Giocrisrai/taller-ia-agentes-biblioteca/blob/main/docente/solucionario-tarea.ipynb) |
 
+> 🆓 **Uso libre.** Este material está bajo [CC BY 4.0](LICENSE): cualquiera puede usarlo,
+> adaptarlo y compartirlo, dando crédito. No hace falta pedir permiso ni tener cuenta de
+> GitHub para abrir los notebooks.
+
 > 📌 **Alumnos:** abran el notebook con el botón, y lo primero que hagan dentro sea
 > `Archivo → Guardar una copia en Drive`. Así trabajan sobre su propia copia.
 >
@@ -158,3 +162,14 @@ que la fuente no tenga.
 - [ ] **Instalar Montserrat** antes de proyectar — está en `presentaciones/_generador/fuentes/`
       y sin ella los títulos no se verán como los de la sesión teórica
       (ver [presentaciones/LEEME.md](presentaciones/LEEME.md))
+
+---
+
+## Licencia
+
+Material educativo bajo **[Creative Commons Atribución 4.0 Internacional](LICENSE)**
+(CC BY 4.0). Puedes usarlo, adaptarlo y compartirlo libremente, incluso con fines
+comerciales, dando crédito a *Giocrisrai Godoy — Bibliotecas DUOC UC*.
+
+Quedan fuera de esa licencia los logotipos institucionales de DUOC UC y la fuente
+Montserrat, que tiene la suya propia (SIL OFL 1.1).
