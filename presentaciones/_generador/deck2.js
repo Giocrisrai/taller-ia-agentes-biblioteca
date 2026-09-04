@@ -67,12 +67,12 @@ const slide = (etiqueta) => {
 {
   const s = slide("MÓDULO 1 · LAS HERRAMIENTAS");
   const y = T.titulo(s, "Tres herramientas de biblioteca", "Fíjate en que la tercera no es como las otras dos");
-  T.fin(T.destaqueTras(pres, s, "Los datos son un diccionario de Python:",
-    "al agente solo le llega lo que la función devuelve.",
+  T.fin(T.destaqueTras(pres, s, "Una herramienta es una función de Python:",
+    "puede leer un diccionario o llamar a una API real. Al agente le da igual: solo ve lo que devuelve.",
     T.tarjetas(pres, s, [
-      { titulo: "buscar_libro", texto: "Consulta si un título está disponible en el catálogo.\n\nSolo lee: no cambia nada." },
-      { titulo: "salas_disponibles", texto: "Dice qué salas de estudio quedan libres a una hora.\n\nSolo lee: no cambia nada." },
-      { titulo: "reservar_sala", texto: "Reserva una sala de verdad.\n\nCambia el estado del mundo. Volvemos sobre esto en el módulo 3." },
+      { titulo: "buscar_libro", texto: "API REAL — Open Library, 40 millones de libros.\n\nSolo lee: no cambia nada." },
+      { titulo: "salas_disponibles", texto: "SIMULADA — DUOC no tiene API pública de salas.\n\nSolo lee: no cambia nada." },
+      { titulo: "reservar_sala", texto: "SIMULADA, y menos mal: cambia el estado del mundo. Volvemos en el módulo 3." },
     ], { y, cols: 3, alto: T.ALTO.unaFila, gap: 15.8, tamTitulo: 12.5 })), "Tres herramientas");
 }
 
@@ -98,7 +98,7 @@ const slide = (etiqueta) => {
       [{ t: "> Entering new AgentExecutor chain..." }],
       [{ t: "" }],
       [{ t: "Invoking: buscar_libro" }, { t: '  con {"titulo": "Sapiens"}', c: C.gris }],
-      [{ t: "  'Sapiens' de Harari esta DISPONIBLE en el estante H-12." }],
+      [{ t: "  Encontre 2320 resultados: Sapiens de Yuval Noah Harari, 2011" }],
       [{ t: "" }],
       [{ t: "Invoking: salas_disponibles" }, { t: '  con {"hora": "16:00"}', c: C.gris }],
       [{ t: "  A las 16:00 estan libres: Sala 204, Sala 301." }],
@@ -204,7 +204,7 @@ const slide = (etiqueta) => {
   const s = slide("CIERRE · SÍNTESIS");
   const y = T.titulo(s, "Tabla resumen del taller", "Todo lo que construiste en las dos sesiones");
   T.fin(T.tabla(pres, s, ["Concepto", "Qué es", "Dónde lo viste"], [
-    ["Herramienta", "Función de Python que el agente puede invocar", "hora_actual, buscar_libro"],
+    ["Herramienta", "Función de Python: un dict o una API real", "buscar_libro → Open Library"],
     ["Encadenamiento", "Varias tools seguidas en una sola consulta", "Libro + sala a las 16:00"],
     ["Memoria", "Lista de mensajes que se reenvía cada turno", "historial con HumanMessage"],
     ["Límite", "Instrucción, tope de pasos o validación en el código", "reservar_sala, renovar_prestamo"],

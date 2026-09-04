@@ -23,6 +23,10 @@ corresponde a cada criterio. No hay sorpresas al corregir.
 | **0** | No hay herramientas propias. |
 
 > 🔍 **Dónde mirar:** **Paso 4** de la plantilla. Lee los docstrings, no el código.
+>
+> 🌍 **Si conectó una API real** (Open Library, Wikipedia, mindicador.cl…) y la envolvió en
+> `try / except`, eso es un 20 sin discusión: demuestra que entendió que la herramienta es
+> una función de Python cualquiera. Datos inventados bien descritos también pueden ser 20.
 
 ---
 

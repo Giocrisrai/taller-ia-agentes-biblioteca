@@ -211,12 +211,12 @@ const slide = (etiqueta) => {
 // ── 17 · Tu turno ────────────────────────────────────────────────────────────
 {
   const s = slide("MÓDULO 3 · ACTIVACIÓN");
-  const y = T.titulo(s, "Tu turno", "Paso 10 del notebook · diez minutos para escribir tu propia herramienta");
+  const y = T.titulo(s, "Tu turno", "Paso 10 · una herramienta que consulta un catálogo real de 40 millones de libros");
   T.fin(T.tarjetas(pres, s, [
-    { n: "10.1", titulo: "Ejecuta el ejemplo", texto: "horario_biblioteca ya funciona. Compruébalo antes de tocar nada." },
-    { n: "10.2", titulo: "Cambia los datos", texto: "Modifica los horarios y vuelve a preguntar. Verás el cambio de inmediato." },
+    { n: "10.1", titulo: "Catálogo real", texto: "buscar_libro consulta Open Library de verdad: autor, año y ediciones. Sin llave." },
+    { n: "10.2", titulo: "Cámbiala", texto: "Otro título, otro número de resultados. Los datos que vuelven son reales." },
     { n: "10.2", titulo: "Rompe la descripción", texto: "Déjala vaga a propósito y observa si el agente sigue eligiéndola." },
-    { n: "10.3", titulo: "Si te sobra tiempo", texto: "Escribe una segunda herramienta y mira al agente elegir entre las dos." },
+    { n: "10.3", titulo: "Otra API", texto: "Wikipedia, mindicador.cl, feriados de Chile. Todas gratis y sin llave." },
   ], { y, cols: 4, alto: 208.8, gap: 15.8, tamTitulo: 12 }), "Tu turno");
   s.addNotes("Circula. Pregunta: ¿qué otra cosa le preguntarías tú a la biblioteca?");
 }
@@ -229,7 +229,7 @@ const slide = (etiqueta) => {
     titulo: "Hasta el lunes",
     subtitulo: "Paso 11 · Archivo → Guardar una copia en Drive. Sin eso, pierdes todo lo de hoy.",
     bloques: [
-      { titulo: "Lo que construiste hoy", texto: "Una herramienta con @tool, un agente que la usa, y la traza ReAct funcionando de verdad en tu pantalla." },
+      { titulo: "Lo que construiste hoy", texto: "Dos herramientas con @tool —el reloj real y un catálogo de 40 millones de libros— y la traza ReAct funcionando." },
       { titulo: "Lo que viene el lunes", texto: "Varias herramientas a la vez, encadenamiento de pasos, memoria conversacional y límites de seguridad." },
       { titulo: "Antes del lunes", texto: "Si trabajaste en modo simulado, resuelve tu llave de Groq. El lunes la vas a necesitar sí o sí." },
     ],

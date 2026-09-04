@@ -25,8 +25,13 @@ No repitas la biblioteca del taller. Elige algo que conozcas: te va a salir mejo
 | Tu emprendimiento | lo que tú vendas |
 | Veterinaria, farmacia, hotel, arriendo de canchas... | lo que se te ocurra |
 
-**Los datos pueden ser inventados.** No necesitas una base de datos: unos diccionarios de
-Python bastan, igual que el `CATALOGO` del taller.
+**Los datos pueden ser inventados** y con eso apruebas: unos diccionarios de Python bastan,
+igual que las salas del taller.
+
+Pero si quieres subir el nivel, **conecta una API real**. El Paso 2 de la plantilla te deja
+cuatro gratuitas y sin llave —Open Library, Wikipedia, mindicador.cl y feriados de Chile—
+con el código listo para copiar. No es obligatorio, pero demuestra que entendiste lo
+esencial: que el agente no sabe de dónde vienen los datos, y que eso lo decides tú.
 
 ---
 

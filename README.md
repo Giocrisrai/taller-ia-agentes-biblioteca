@@ -104,12 +104,33 @@ Los pasos 1 y 2 del viernes están desglosados clic a clic (`1.1`, `1.2`, ... `2
 ahí es donde se atasca la gente. La diapositiva 5 de la PPT usa esa misma numeración, y la
 guía del alumno también.
 
+## Los agentes consultan datos reales
+
+No hay datos inventados donde exista una API pública:
+
+| Herramienta | De dónde salen los datos |
+|---|---|
+| `hora_actual` | El reloj del sistema, zona `America/Santiago` |
+| `buscar_libro` | **Open Library** — catálogo abierto de 40 millones de libros: autor, año y ediciones |
+| `salas_disponibles`, `reservar_sala`, `renovar_prestamo` | Simuladas **a propósito**: DUOC no tiene API pública de salas, y simular la reserva es lo que permite provocar el fallo del guardarraíl sin reservarle una sala a nadie |
+
+Los notebooks marcan cada herramienta como real o simulada, así que la distinción es parte
+de la lección: *una herramienta es una función de Python, y puede leer un diccionario o
+llamar a cualquier API del mundo — al agente le da igual.*
+
+La plantilla de la tarea añade cuatro APIs gratuitas y sin llave (Open Library, Wikipedia
+en español, mindicador.cl, feriados de Chile) con el patrón de código y el aviso de
+envolver siempre en `try / except`.
+
 ## Decisiones de diseño
 
 **Modo simulado.** Los tres notebooks detectan si falta la llave de Groq y siguen
 funcionando con un agente de respaldo sin modelo de lenguaje. Nadie se queda mirando
 la pantalla mientras la clase avanza. Con ~80 personas creando cuentas a la vez, esto
 es lo que evita perder la hora.
+
+**Datos reales siempre que se pueda.** Un agente que devuelve un diccionario inventado no
+inspira a nadie. Cuando existe una API pública, la herramienta la llama de verdad.
 
 **Nivel introductorio real.** Todo el código está escrito y comentado. El trabajo del
 estudiante es ejecutarlo y cambiar palabras dentro. Cada bloque "tu turno" arranca con
