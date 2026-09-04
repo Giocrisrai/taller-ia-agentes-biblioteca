@@ -81,7 +81,7 @@ Sí está publicado, porque los estudiantes deben verlo:
 | 1 | Teórica *(ya dictada)* | — | Qué es un agente, ReAct, tipos y patrones |
 | 2 | **Práctica 1 — viernes** | 60 min | Un agente con **una herramienta**. Ven la traza ReAct funcionando. |
 | 3 | **Práctica 2 — lunes** | 60 min | **Varias herramientas**, encadenamiento, **memoria** y **límites**. |
-| 4 | **Tarea evaluada** | autónomo | Su propio agente, en el dominio que elijan. 100 pts (el 100% de la nota del curso), escala 1,0–7,0. |
+| 4 | **Tarea evaluada** | entrega 14-sep | Su propio agente, en el dominio que elijan. 100 pts (el 100% de la nota del curso), escala 1,0–7,0. |
 
 ---
 
@@ -179,7 +179,6 @@ propio, que busca desbordes de texto, elementos que pisen el logo y glifos ausen
 
 ## Lo que tienes que decidir tú
 
-- [ ] **Fecha de entrega** de la tarea *(el guion del lunes tiene el hueco marcado)*
 - [ ] **Dónde se entrega** el enlace de Colab (AVA, formulario, correo)
 - [ ] **Política de modo simulado** en la evaluación — hay una sugerida en la rúbrica;
       anúnciala el lunes, no al corregir

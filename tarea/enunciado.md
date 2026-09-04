@@ -2,6 +2,7 @@
 
 **DUOC UC · Bibliotecas** · Curso de IA Aplicando Agentes
 **Modalidad:** individual · **Entrega:** enlace a Google Colab
+**Fecha de entrega:** lunes 14 de septiembre de 2026, 23:00 (una semana desde la sesión del lunes)
 
 ---
 

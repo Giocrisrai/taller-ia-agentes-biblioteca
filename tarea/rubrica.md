@@ -1,5 +1,7 @@
 # Rúbrica de corrección — Tarea evaluada
 
+**Fecha de entrega:** lunes 14 de septiembre de 2026, 23:00.
+
 **5 criterios × 20 puntos = 100 puntos.** Escala 1,0 – 7,0 con exigencia 60%.
 
 Es la única evaluación del taller, así que su puntaje es el 100% de la nota del curso.
