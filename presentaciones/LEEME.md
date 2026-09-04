@@ -11,31 +11,25 @@ vista Presentador de PowerPoint o Keynote).
 
 ---
 
-## ⚠️ Instala Montserrat antes de proyectar
+## Sobre la fuente Montserrat
 
-Las diapositivas usan **Montserrat ExtraBold** para los títulos, igual que la teórica.
-**No está instalada en tu Mac**: si abres el archivo así, PowerPoint sustituirá la fuente
-y los títulos se verán distintos a los de la sesión teórica.
+**Comprobado abriendo los archivos en tu PowerPoint:** las presentaciones se renderizan
+con **Montserrat de verdad**, igual que la sesión teórica. Tu Microsoft 365 la resuelve
+solo, aunque no esté instalada en `~/Library/Fonts`. **No tienes que hacer nada.**
 
-La familia ya está descargada aquí:
+Se verificó exportando ambos `.pptx` a PDF desde PowerPoint: el PDF resultante lleva
+`Montserrat-Bold` incrustada en 36 diapositivas.
 
-```
-presentaciones/_generador/fuentes/
-├── Montserrat-Regular.ttf
-├── Montserrat-Bold.ttf
-└── Montserrat-ExtraBold.ttf
-```
+**Cuándo sí te va a hacer falta instalarla:** si presentas desde **otro computador** —el
+de la sala, por ejemplo— que no tenga Microsoft 365 con las fuentes en la nube. En ese
+caso tienes dos salidas:
 
-**Para instalarla:** selecciona los tres archivos, doble clic, y en el Libro de Fuentes
-pulsa *Instalar*. Después cierra y vuelve a abrir PowerPoint.
+- Instalar la familia: está en `_generador/fuentes/`, seleccionas los tres `.ttf`, doble
+  clic, *Instalar*.
+- O, más simple, **exportar a PDF antes** (`Archivo → Exportar → PDF`). El PDF lleva la
+  fuente incrustada y se ve idéntico en cualquier máquina.
 
-Si vas a presentar desde otro computador (el de la sala, por ejemplo), instálala también
-allí, o exporta a PDF antes: `Archivo → Exportar → PDF`. El PDF lleva la fuente incrustada
-y se ve igual en cualquier parte.
-
-El texto de cuerpo usa **Arial**, que ya viene con Office en Mac y en Windows.
-
----
+El texto de cuerpo usa **Arial**, que viene con Office en Mac y en Windows.
 
 ## El sistema de diseño
 
@@ -110,11 +104,15 @@ viernes.
 
 ---
 
-## Lo que no está verificado
+## Verificación
 
-Las 36 diapositivas se revisaron con el renderizador propio, no con PowerPoint ni
-LibreOffice. La geometría sale medida del PDF original y el archivo lo abre `python-pptx`
-sin errores, pero **conviene que las abras tú una vez** antes de proyectar.
+Las 36 diapositivas se revisaron por dos vías independientes:
+
+1. **Con PowerPoint de verdad.** Se abrieron ambos `.pptx` en Microsoft PowerPoint y se
+   exportaron a PDF desde ahí. Las 36 páginas tienen contenido, ninguna quedó en blanco,
+   y Montserrat se incrusta correctamente.
+2. Con el renderizador propio (`revisar.py`), que detecta desbordes de texto, elementos
+   que pisen el logo y glifos ausentes en la fuente.
 
 El validador de esquema del paquete reporta un error en `docProps/core.xml`. Está
 comprobado que **no es de estos archivos**: una presentación mínima generada con la misma

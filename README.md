@@ -145,13 +145,13 @@ errores, y lo que se enseña ocurre de verdad:
 | El límite del prompt frena | Pide reservar sin elegir sala → pregunta cuál, `RESERVAS` vacía |
 | La validación del código frena | `registrar_pedido(50)` → *"máximo 10 unidades"*, stock intacto |
 
-Las dos presentaciones (36 diapositivas) se revisaron con un renderizador propio que lee
-el `.pptx` real: sin desbordes de texto, sin elementos que pisen el logo y sin caracteres
-que la fuente no tenga.
+Las dos presentaciones (36 diapositivas) se abrieron **en Microsoft PowerPoint** y se
+exportaron a PDF desde ahí: ninguna página en blanco y Montserrat se incrusta bien, así
+que se ven igual que la sesión teórica sin instalar nada. Además pasan el renderizador
+propio, que busca desbordes de texto, elementos que pisen el logo y glifos ausentes.
 
 ### Lo que queda sin comprobar
 
-- **Las PPT no se abrieron en PowerPoint** desde aquí. Instala Montserrat y ábrelas una vez.
 - **Los notebooks no se ejecutaron dentro de Colab**, sino en un entorno equivalente. El
   código que difiere es el de `google.colab.userdata` para leer el Secret; el resto es
   idéntico. Se comprueba en dos minutos abriendo el primero desde el badge.
@@ -163,9 +163,9 @@ que la fuente no tenga.
 - [ ] **Política de modo simulado** en la evaluación — hay una sugerida en la rúbrica;
       anúnciala el lunes, no al corregir
 - [ ] Si corriges o no las 4 diapositivas del PPT teórico con código desactualizado
-- [ ] **Instalar Montserrat** antes de proyectar — está en `presentaciones/_generador/fuentes/`
-      y sin ella los títulos no se verán como los de la sesión teórica
-      (ver [presentaciones/LEEME.md](presentaciones/LEEME.md))
+- [ ] Si presentas desde **otro computador**, exporta las PPT a PDF antes o instala
+      Montserrat (`presentaciones/_generador/fuentes/`). En el tuyo no hace falta:
+      PowerPoint la resuelve solo (ver [presentaciones/LEEME.md](presentaciones/LEEME.md))
 
 ---
 
