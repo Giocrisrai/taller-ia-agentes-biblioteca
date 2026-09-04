@@ -15,7 +15,6 @@ desde **Groq**, que es gratuito y no pide tarjeta de crédito.
 | **Taller Práctico 1** | Viernes | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Giocrisrai/taller-ia-agentes-biblioteca/blob/main/notebooks/01_Taller_Practico_1.ipynb) |
 | **Taller Práctico 2** | Lunes | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Giocrisrai/taller-ia-agentes-biblioteca/blob/main/notebooks/02_Taller_Practico_2.ipynb) |
 | **Plantilla de la tarea** | Entrega | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Giocrisrai/taller-ia-agentes-biblioteca/blob/main/notebooks/03_Tarea_Plantilla.ipynb) |
-| **Solucionario** *(docente)* | Corrección | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Giocrisrai/taller-ia-agentes-biblioteca/blob/main/docente/solucionario-tarea.ipynb) |
 
 > 🆓 **Uso libre.** Este material está bajo [CC BY 4.0](LICENSE): cualquiera puede usarlo,
 > adaptarlo y compartirlo, dando crédito. No hace falta pedir permiso ni tener cuenta de
@@ -38,21 +37,27 @@ Verificado línea por línea.
 Los notebooks de este taller **ya usan la versión correcta**, así que a los estudiantes no
 les va a fallar nada. Pero conviene que lo sepas antes de proyectar el PPT.
 
-👉 **[docente/notas-tecnicas.md](docente/notas-tecnicas.md) §1** — el detalle y la corrección.
+👉 El detalle y la corrección están en `docente/notas-tecnicas.md` §1, en la copia local del docente.
 
 ---
 
 ## Qué hay aquí
 
-### Para ti
+### Para el docente — no se publica aquí
+
+Estos cuatro archivos **no están en este repositorio**: viven solo en la copia local del
+docente. El solucionario es la pauta de la tarea evaluada, y publicarlo en abierto la
+dejaría al alcance de los estudiantes.
 
 | Archivo | Para qué |
 |---|---|
-| [docente/notas-tecnicas.md](docente/notas-tecnicas.md) | Lo que ya no ejecuta del PPT, cuotas de Groq, errores previstos, riesgos |
-| [docente/guion-sesion-1.md](docente/guion-sesion-1.md) | Viernes, minuto a minuto, con frases de clase y plan B |
-| [docente/guion-sesion-2.md](docente/guion-sesion-2.md) | Lunes, minuto a minuto |
-| [docente/solucionario-tarea.ipynb](docente/solucionario-tarea.ipynb) | Entrega de referencia 100/100 + notas de corrección |
-| [presentaciones/LEEME.md](presentaciones/LEEME.md) | Las PPT: instalar Montserrat, sistema de diseño, cómo regenerarlas |
+| `docente/notas-tecnicas.md` | Lo que ya no ejecuta del PPT, cuotas de Groq, errores previstos, riesgos |
+| `docente/guion-sesion-1.md` | Viernes, minuto a minuto, con frases de clase y plan B |
+| `docente/guion-sesion-2.md` | Lunes, minuto a minuto |
+| `docente/solucionario-tarea.ipynb` | Entrega de referencia 100/100 + notas de corrección |
+
+Sí está publicado, porque los estudiantes deben verlo:
+[presentaciones/LEEME.md](presentaciones/LEEME.md) — cómo instalar Montserrat y regenerar las PPT.
 
 ### Para repartir
 
@@ -118,8 +123,7 @@ propio paso. Es lo que evita que alguien se quede atascado en silencio.
 PPT teórico (`buscar_libro`, `reservar_sala`). La tarea, en cambio, es de dominio libre.
 
 **No se solapa con el ramo de Ingeniería de Soluciones con IA.** Comparte la base técnica
-(Groq, LangChain, mismos modelos) pero ningún ejercicio. Comparativa en
-[notas-tecnicas.md §5](docente/notas-tecnicas.md).
+(Groq, LangChain, mismos modelos) pero ningún ejercicio. La comparativa está en `docente/notas-tecnicas.md` §5.
 
 ---
 
