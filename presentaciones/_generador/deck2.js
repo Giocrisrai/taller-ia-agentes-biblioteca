@@ -98,14 +98,14 @@ const slide = (etiqueta) => {
       [{ t: "> Entering new AgentExecutor chain..." }],
       [{ t: "" }],
       [{ t: "Invoking: buscar_libro" }, { t: '  con {"titulo": "Sapiens"}', c: C.gris }],
-      [{ t: "  Encontre 2320 resultados: Sapiens de Yuval Noah Harari, 2011" }],
+      [{ t: "  Encontre 2318 resultados: Sapiens de Yuval Noah Harari, 2011" }],
       [{ t: "" }],
       [{ t: "Invoking: salas_disponibles" }, { t: '  con {"hora": "16:00"}', c: C.gris }],
       [{ t: "  A las 16:00 estan libres: Sala 204, Sala 301." }],
       [{ t: "" }],
       [{ t: "> Finished chain." }],
     ], { y, tam: 11.5, alto: 165.6 })), "Encadenamiento");
-  s.addNotes("Detén la clase aquí y señala los DOS Invoking. Es el concepto central de la sesión. Si a alguien le salió distinto, úsalo para hablar de alucinación.");
+  s.addNotes("Detén la clase aquí y señala los DOS Invoking. Es el concepto central de la sesión. Si a alguien le salió distinto, úsalo para hablar de alucinación. OJO: el número de resultados cambia cada día porque es una consulta real a Open Library. Si en pantalla sale otro, dilo en voz alta: es la prueba de que no está simulado.");
 }
 
 // ── 8 · Divisor módulo 2 ─────────────────────────────────────────────────────
