@@ -48,10 +48,10 @@ const slide = (etiqueta) => {
   const s = slide("RUTA DE LA SESIÓN");
   const y = T.titulo(s, "Agenda", "Cuatro bloques en 60 minutos: de la llave al agente funcionando");
   T.fin(T.tarjetas(pres, s, [
-    { titulo: "Puesta en marcha", texto: "Pasos 1-4 · cuenta de Groq, llave y Secrets de Colab  ·  15 min" },
+    { titulo: "Puesta en marcha", texto: "Pasos 1-4 · cuenta de Groq, llave y Secrets de Colab  ·  13 min" },
     { titulo: "El modelo solo", texto: "Paso 5 · qué pasa cuando no tiene herramientas  ·  8 min" },
     { titulo: "La herramienta", texto: "Pasos 6-7 · @tool, la función y su descripción  ·  10 min" },
-    { titulo: "El agente", texto: "Pasos 8-11 · armarlo, ejecutarlo y leer la traza  ·  22 min" },
+    { titulo: "El agente", texto: "Pasos 8-11 · armarlo, ejecutarlo y leer la traza  ·  24 min" },
   ], { y, cols: 4, alto: T.ALTO.unaFila, gap: 15.8, tamTitulo: 12 }), "Agenda");
   s.addNotes("Si vas atrasado, recorta el TU TURNO del bloque 4, nunca la lectura de la traza.");
 }
