@@ -50,9 +50,9 @@ const slide = (etiqueta) => {
   const y = T.titulo(s, "Agenda", "Tres bloques en 60 minutos, y el cierre con la tarea");
   T.fin(T.tarjetas(pres, s, [
     { titulo: "Varias herramientas", texto: "El agente elige entre tres y encadena dos en una consulta  ·  20 min" },
-    { titulo: "Memoria", texto: "Por qué olvida y cómo hacer que recuerde  ·  15 min" },
-    { titulo: "Límites", texto: "Los tres tipos, y cuál es el que de verdad protege  ·  15 min" },
-    { titulo: "Tu turno y tarea", texto: "Una cuarta herramienta y el encargo evaluado  ·  10 min" },
+    { titulo: "Memoria", texto: "Por qué olvida y cómo hacer que recuerde  ·  13 min" },
+    { titulo: "Límites", texto: "Los tres tipos, y cuál es el que de verdad protege  ·  10 min" },
+    { titulo: "Tu turno y tarea", texto: "Una cuarta herramienta y el encargo evaluado  ·  12 min" },
   ], { y, cols: 4, alto: T.ALTO.unaFila, gap: 15.8, tamTitulo: 12 }), "Agenda");
 }
 
@@ -215,7 +215,7 @@ const slide = (etiqueta) => {
 // ── 17 · La tarea ────────────────────────────────────────────────────────────
 {
   const s = slide("CIERRE · TAREA EVALUADA");
-  const y = T.titulo(s, "Tu propio agente", "Dominio libre · 100 puntos, el 100% de la nota del curso");
+  const y = T.titulo(s, "Tu propio agente", "Dominio libre · 100 puntos = 100% de la nota · Entrega: lunes 14 de septiembre, 23:00");
   T.fin(T.destaqueTras(pres, s, "Y el quinto, otros 20:",
     "un párrafo de máx. 150 palabras con un riesgo de TU agente y cómo lo mitigarías. Se aprueba con 60.",
     T.tabla(pres, s, ["#", "Requisito", "Puntos"], [
@@ -224,7 +224,7 @@ const slide = (etiqueta) => {
       ["3", "Tres turnos con memoria, donde el turno 3 dependa del 1", "20"],
       ["4", "Un límite explícito que se vea actuando", "20"],
     ], [7, 79, 14], { y })), "Tarea");
-  s.addNotes("Di en voz alta: dominio libre, hay plantilla, y hay que entregarlo EJECUTADO. Define y anuncia la fecha de entrega.");
+  s.addNotes("Di en voz alta: dominio libre, hay plantilla (03_Tarea_Plantilla), y hay que entregarlo EJECUTADO. Fecha de entrega: lunes 14 de septiembre de 2026, 23:00. Ya está puesta en el campus.");
 }
 
 // ── 18 · Cierre ──────────────────────────────────────────────────────────────
