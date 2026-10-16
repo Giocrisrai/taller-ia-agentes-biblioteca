@@ -26,14 +26,13 @@ sin costo para estudiantes ni institución.
 | Archivo | Para quién | Para qué |
 |---|---|---|
 | `estudiantes/guia-pre-trabajo.md` | Estudiantes, **antes** del Taller 1 | Crear y guardar la llave de Groq |
-| `notebooks/01_Taller_Practico_1.ipynb` | Estudiantes | Taller 1 · 10 pasos |
-| `notebooks/02_Taller_Practico_2.ipynb` | Estudiantes | Taller 2 · 10 pasos |
-| `docente/pauta_soluciones.ipynb` | **Solo docente** | Todos los ejercicios resueltos, ejecutados contra la API real |
+| `notebooks/01_Taller_Practico_1.ipynb` | Docente y estudiantes | Taller 1 · 10 pasos **resueltos** + 3 desafíos propuestos |
+| `notebooks/02_Taller_Practico_2.ipynb` | Docente y estudiantes | Taller 2 · 10 pasos **resueltos** + 3 desafíos propuestos |
+| `docente/pauta_soluciones.ipynb` | **Solo docente** | Soluciones de los desafíos, ejecutadas contra la API real, y respuestas guía del cierre |
 | `docente/guion-taller-1.md` · `guion-taller-2.md` | **Solo docente** | Minuto a minuto, qué decir, qué se observó, plan B |
 | `docente/notas-tecnicas.md` | **Solo docente** | Versiones, cupos, errores en vivo, qué cambió respecto de septiembre |
-| `docente/ejecucion_referencia/` | **Solo docente** | Los dos talleres ejecutados contra la API, con las salidas visibles (los ejercicios quedan sin resolver, como los verá un estudiante) |
 
-`docente/` y `_build/` **no se publican** (están en `.gitignore`): contienen la pauta de soluciones.
+`docente/` y `_build/` **no se publican** (están en `.gitignore`): contienen la pauta de los desafíos.
 `_build/` es el generador de los notebooks: `python _build/build_t1.py` (y `build_t2.py`, `build_pauta.py`) los regenera tras editar el contenido.
 
 ---
@@ -46,7 +45,7 @@ sin costo para estudiantes ni institución.
 | | Agente simple: modelo + *system prompt* | Pasos 4 y 6 |
 | | Una herramienta simple (calculadora de multas) | Paso 5 |
 | | Pruebas con distintas consultas y lectura del razonamiento | Pasos 7–8 |
-| | *Ejercicio:* escribir `dias_de_atraso` y encadenarla | Paso 9 |
+| | Más herramientas: fechas (`dias_de_atraso`) y API real (`buscar_libro`); encadenamiento | Paso 9 |
 | **2** | Segunda herramienta: **lectura de un documento** (reglamento) y **API externa** (Open Library) | Pasos 4–6 |
 | | Memoria conversacional | Paso 7 |
 | | Orquestación: **el loop del agente escrito a mano** | Paso 8 |
@@ -59,8 +58,9 @@ sin costo para estudiantes ni institución.
 - **Proveedor con respaldo automático:** Groq `gpt-oss-120b` → Groq `gpt-oss-20b` (cupo
   independiente, misma llave) → modo simulado. Una sola llave: la de Groq. Con ~80 personas creando cuentas, nadie se queda fuera.
 - **La traza muestra el razonamiento** (🧠) que expone gpt-oss, no solo las acciones.
-- **Ejercicios de código con comprobación automática**: el estudiante sabe al instante si su
-  herramienta cumple, y el docente circula donde hay ❌.
+- **Talleres resueltos, desafíos aparte**: el docente presenta los dos notebooks completos y al
+  final de cada uno quedan **3 desafíos propuestos** con comprobación automática (🎉/❌), para
+  dejarlos como asignación si se quiere.
 - **Datos reales donde existe API** (Open Library). Préstamos y reglamento son **de ejemplo**,
   y los notebooks lo dicen: no es el reglamento oficial de DUOC UC.
 - **Límites en tres capas** — instrucciones, `max_pasos` y validación en el código — con la
