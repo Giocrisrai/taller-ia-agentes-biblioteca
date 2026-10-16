@@ -2,8 +2,8 @@
 
 Material de los **dos talleres prácticos** (60 min cada uno) del *Curso de Inteligencia
 Artificial Aplicando Agentes — Nivel Básico-Medio*, versión octubre 2026: para personas que
-**ya programan en Python**. Todo corre en **Google Colab** con el plan gratuito de **Groq**
-y **Gemini** como respaldo: sin costo para estudiantes ni institución.
+**ya programan en Python**. Todo corre en **Google Colab** con el plan gratuito de **Groq**:
+sin costo para estudiantes ni institución.
 
 ---
 
@@ -25,7 +25,7 @@ y **Gemini** como respaldo: sin costo para estudiantes ni institución.
 
 | Archivo | Para quién | Para qué |
 |---|---|---|
-| `estudiantes/guia-pre-trabajo.md` | Estudiantes, **antes** del Taller 1 | Crear y guardar la llave de Groq (y la opcional de Gemini) |
+| `estudiantes/guia-pre-trabajo.md` | Estudiantes, **antes** del Taller 1 | Crear y guardar la llave de Groq |
 | `notebooks/01_Taller_Practico_1.ipynb` | Estudiantes | Taller 1 · 10 pasos |
 | `notebooks/02_Taller_Practico_2.ipynb` | Estudiantes | Taller 2 · 10 pasos |
 | `docente/pauta_soluciones.ipynb` | **Solo docente** | Todos los ejercicios resueltos, ejecutados contra la API real |
@@ -57,7 +57,7 @@ y **Gemini** como respaldo: sin costo para estudiantes ni institución.
 
 - **API actual de LangChain** (`create_agent`, 1.x), no la clásica: es la que encontrarán en la documentación hoy.
 - **Proveedor con respaldo automático:** Groq `gpt-oss-120b` → Groq `gpt-oss-20b` (cupo
-  independiente) → Gemini → modo simulado. Con ~80 personas creando cuentas, nadie se queda fuera.
+  independiente, misma llave) → modo simulado. Una sola llave: la de Groq. Con ~80 personas creando cuentas, nadie se queda fuera.
 - **La traza muestra el razonamiento** (🧠) que expone gpt-oss, no solo las acciones.
 - **Ejercicios de código con comprobación automática**: el estudiante sabe al instante si su
   herramienta cumple, y el docente circula donde hay ❌.
@@ -70,8 +70,7 @@ y **Gemini** como respaldo: sin costo para estudiantes ni institución.
 
 Los dos notebooks y la pauta se ejecutaron **en Google Colab, de principio a fin, contra la API real de Groq** (15-oct-2026; la pauta dio 7 de 7). Antes, también
 el 14-oct-2026 en entornos equivalentes, en **modo simulado** (sin llaves) y desde el zip de entrega en una
-carpeta limpia. El detalle de lo observado, y lo que queda sin comprobar (Gemini con llave
-real, ejecución dentro de Colab), está en `docente/notas-tecnicas.md` §5 y §6.
+carpeta limpia. El detalle de lo observado está en `docente/notas-tecnicas.md` §5 y §6.
 
 ## Publicar
 
