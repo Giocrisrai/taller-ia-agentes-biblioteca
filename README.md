@@ -68,8 +68,8 @@ y **Gemini** como respaldo: sin costo para estudiantes ni institución.
 
 ## Verificación
 
-Los dos notebooks y la pauta se ejecutaron **de principio a fin contra la API real de Groq**
-el 14-oct-2026, también en **modo simulado** (sin llaves) y desde el zip de entrega en una
+Los dos notebooks y la pauta se ejecutaron **en Google Colab, de principio a fin, contra la API real de Groq** (15-oct-2026; la pauta dio 7 de 7). Antes, también
+el 14-oct-2026 en entornos equivalentes, en **modo simulado** (sin llaves) y desde el zip de entrega en una
 carpeta limpia. El detalle de lo observado, y lo que queda sin comprobar (Gemini con llave
 real, ejecución dentro de Colab), está en `docente/notas-tecnicas.md` §5 y §6.
 
