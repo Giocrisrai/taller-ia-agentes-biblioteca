@@ -1,15 +1,14 @@
-# Dependencias del generador de las presentaciones.
-# Se reinstalan con:  cd presentaciones/_generador && npm install
-node_modules/
+# El repositorio es público: docente/ contiene la pauta de soluciones,
+# y _build/ el generador, que también contiene las soluciones. Ninguno se publica.
+docente/
+_build/
 
-# Salidas temporales de la revisión visual
-revision/
-*.pdf.tmp
+# Archivos que generan los notebooks al ejecutarse
+reglamento_biblioteca.md
 
 # Sistema
 .DS_Store
 .claude/
 __pycache__/
 .ipynb_checkpoints/
-
-docente/
+.env

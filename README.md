@@ -1,10 +1,9 @@
-# Taller de IA aplicando agentes — Bibliotecas DUOC UC
+# Taller de IA aplicando agentes — Bibliotecas DUOC UC · Octubre 2026
 
-Material completo de las **dos sesiones prácticas** y la **tarea evaluada** que siguen a la
-sesión teórica *Introducción a la IA Aplicando Agentes*.
-
-Todo corre en **Google Colab**: los estudiantes no instalan nada. El modelo se consume
-desde **Groq**, que es gratuito y no pide tarjeta de crédito.
+Material de los **dos talleres prácticos** (60 min cada uno) del *Curso de Inteligencia
+Artificial Aplicando Agentes — Nivel Básico-Medio*, versión octubre 2026: para personas que
+**ya programan en Python**. Todo corre en **Google Colab** con el plan gratuito de **Groq**
+y **Gemini** como respaldo: sin costo para estudiantes ni institución.
 
 ---
 
@@ -12,188 +11,82 @@ desde **Groq**, que es gratuito y no pide tarjeta de crédito.
 
 | Notebook | Cuándo | |
 |---|---|---|
-| **Taller Práctico 1** | Viernes | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Giocrisrai/taller-ia-agentes-biblioteca/blob/main/notebooks/01_Taller_Practico_1.ipynb) |
-| **Taller Práctico 2** | Lunes | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Giocrisrai/taller-ia-agentes-biblioteca/blob/main/notebooks/02_Taller_Practico_2.ipynb) |
-| **Plantilla de la tarea** | Entrega | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Giocrisrai/taller-ia-agentes-biblioteca/blob/main/notebooks/03_Tarea_Plantilla.ipynb) |
+| **Taller Práctico 1** — agente básico con herramientas | Sesión 1 | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Giocrisrai/taller-ia-agentes-biblioteca/blob/main/notebooks/01_Taller_Practico_1.ipynb) |
+| **Taller Práctico 2** — varias herramientas, memoria y proyecto integrador | Sesión 2 | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Giocrisrai/taller-ia-agentes-biblioteca/blob/main/notebooks/02_Taller_Practico_2.ipynb) |
 
-> 🆓 **Uso libre.** Este material está bajo [CC BY 4.0](LICENSE): cualquiera puede usarlo,
-> adaptarlo y compartirlo, dando crédito. No hace falta pedir permiso ni tener cuenta de
-> GitHub para abrir los notebooks.
+**Antes del Taller 1:** cada estudiante crea su llave siguiendo el
+[pre-trabajo de 10 minutos](estudiantes/guia-pre-trabajo.md).
 
-> 📌 **Alumnos:** abran el notebook con el botón, y lo primero que hagan dentro sea
-> `Archivo → Guardar una copia en Drive`. Así trabajan sobre su propia copia.
->
-> Antes del viernes, saquen su llave de Groq siguiendo la
-> [guía de 10 minutos](estudiantes/guia-groq-colab.md).
-
----
-
-## 🔴 Léelo antes del viernes
-
-**El código de las diapositivas teóricas ya no ejecuta.** LangChain 1.0 movió esas
-funciones al paquete `langchain-classic`, y Groq retiró los modelos Llama en agosto 2026.
-Verificado línea por línea.
-
-Los notebooks de este taller **ya usan la versión correcta**, así que a los estudiantes no
-les va a fallar nada. Pero conviene que lo sepas antes de proyectar el PPT.
-
-👉 El detalle y la corrección están en `docente/notas-tecnicas.md` §1, en la copia local del docente.
+> 📌 Dentro de Colab, lo primero: `Archivo → Guardar una copia en Drive`.
 
 ---
 
 ## Qué hay aquí
 
-### Para el docente — no se publica aquí
+| Archivo | Para quién | Para qué |
+|---|---|---|
+| `estudiantes/guia-pre-trabajo.md` | Estudiantes, **antes** del Taller 1 | Crear y guardar la llave de Groq (y la opcional de Gemini) |
+| `notebooks/01_Taller_Practico_1.ipynb` | Estudiantes | Taller 1 · 10 pasos |
+| `notebooks/02_Taller_Practico_2.ipynb` | Estudiantes | Taller 2 · 10 pasos |
+| `docente/pauta_soluciones.ipynb` | **Solo docente** | Todos los ejercicios resueltos, ejecutados contra la API real |
+| `docente/guion-taller-1.md` · `guion-taller-2.md` | **Solo docente** | Minuto a minuto, qué decir, qué se observó, plan B |
+| `docente/notas-tecnicas.md` | **Solo docente** | Versiones, cupos, errores en vivo, qué cambió respecto de septiembre |
+| `docente/ejecucion_referencia/` | **Solo docente** | Los dos talleres ejecutados contra la API, con las salidas visibles (los ejercicios quedan sin resolver, como los verá un estudiante) |
 
-Estos cuatro archivos **no están en este repositorio**: viven solo en la copia local del
-docente. El solucionario es la pauta de la tarea evaluada, y publicarlo en abierto la
-dejaría al alcance de los estudiantes.
-
-| Archivo | Para qué |
-|---|---|
-| `docente/notas-tecnicas.md` | Lo que ya no ejecuta del PPT, cuotas de Groq, errores previstos, riesgos |
-| `docente/guion-sesion-1.md` | Viernes, minuto a minuto, con frases de clase y plan B |
-| `docente/guion-sesion-2.md` | Lunes, minuto a minuto |
-| `docente/solucionario-tarea.ipynb` | Entrega de referencia 100/100 + notas de corrección |
-
-Sí está publicado, porque los estudiantes deben verlo:
-[presentaciones/LEEME.md](presentaciones/LEEME.md) — cómo instalar Montserrat y regenerar las PPT.
-
-### Para repartir
-
-| Archivo | Cuándo |
-|---|---|
-| [presentaciones/Taller_Practico_1.pptx](presentaciones/Taller_Practico_1.pptx) | Viernes, para proyectar (18 diapositivas, con notas del orador) |
-| [presentaciones/Taller_Practico_2.pptx](presentaciones/Taller_Practico_2.pptx) | Lunes, para proyectar (18 diapositivas, con notas del orador) |
-| [estudiantes/guia-groq-colab.md](estudiantes/guia-groq-colab.md) | **Antes** del viernes: cómo sacar la llave |
-| [notebooks/01_Taller_Practico_1.ipynb](notebooks/01_Taller_Practico_1.ipynb) | Viernes |
-| [notebooks/02_Taller_Practico_2.ipynb](notebooks/02_Taller_Practico_2.ipynb) | Lunes |
-| [notebooks/03_Tarea_Plantilla.ipynb](notebooks/03_Tarea_Plantilla.ipynb) | Lunes, al cierre |
-| [tarea/enunciado.md](tarea/enunciado.md) | Lunes, al cierre |
-| [tarea/rubrica.md](tarea/rubrica.md) | Lunes, junto al enunciado |
+`docente/` y `_build/` **no se publican** (están en `.gitignore`): contienen la pauta de soluciones.
+`_build/` es el generador de los notebooks: `python _build/build_t1.py` (y `build_t2.py`, `build_pauta.py`) los regenera tras editar el contenido.
 
 ---
 
 ## El recorrido
 
-| # | Sesión | Duración | Qué construyen |
-|---|---|---|---|
-| 1 | Teórica *(ya dictada)* | — | Qué es un agente, ReAct, tipos y patrones |
-| 2 | **Práctica 1 — viernes** | 60 min | Un agente con **una herramienta**. Ven la traza ReAct funcionando. |
-| 3 | **Práctica 2 — lunes** | 60 min | **Varias herramientas**, encadenamiento, **memoria** y **límites**. |
-| 4 | **Tarea evaluada** | entrega 14-sep | Su propio agente, en el dominio que elijan. 100 pts (el 100% de la nota del curso), escala 1,0–7,0. |
-
----
-
-## Los notebooks van numerados paso a paso
-
-Los tres siguen la misma estructura: cada acción es un **paso numerado**, y cada celda de
-código empieza con `▶ PASO N` en su primera línea. Así puedes decir *"vamos por el Paso 6"*
-y las 80 personas saben exactamente dónde están.
-
-| Notebook | Pasos | Estructura |
+| Taller | Contenido del plan de trabajo | Dónde |
 |---|---|---|
-| `01_Taller_Practico_1` | **11** | 1-4 la llave · 5 el modelo solo falla · 6-7 la herramienta · 8-9 el agente y la traza · 10 tu turno · 11 guardar |
-| `02_Taller_Practico_2` | **10** | 1 entorno · 2-4 varias herramientas y encadenamiento · 5-7 memoria · 8 límites · 9 tu turno · 10 la tarea |
-| `03_Tarea_Plantilla` | **10** | 1-3 preparación · 4-8 los cinco requisitos (20 pts cada uno) · 9 lista de verificación · 10 compartir |
-
-En la plantilla, **cada paso evaluado lleva dentro los descriptores de la rúbrica**: el
-estudiante ve de antemano qué separa un 4 de un 2. No hay sorpresas al corregir.
-
-Los pasos 1 y 2 del viernes están desglosados clic a clic (`1.1`, `1.2`, ... `2.6`) porque
-ahí es donde se atasca la gente. La diapositiva 5 de la PPT usa esa misma numeración, y la
-guía del alumno también.
-
-## Los agentes consultan datos reales
-
-No hay datos inventados donde exista una API pública:
-
-| Herramienta | De dónde salen los datos |
-|---|---|
-| `hora_actual` | El reloj del sistema, zona `America/Santiago` |
-| `buscar_libro` | **Open Library** — catálogo abierto de 40 millones de libros: autor, año y ediciones |
-| `salas_disponibles`, `reservar_sala`, `renovar_prestamo` | Simuladas **a propósito**: DUOC no tiene API pública de salas, y simular la reserva es lo que permite provocar el fallo del guardarraíl sin reservarle una sala a nadie |
-
-Los notebooks marcan cada herramienta como real o simulada, así que la distinción es parte
-de la lección: *una herramienta es una función de Python, y puede leer un diccionario o
-llamar a cualquier API del mundo — al agente le da igual.*
-
-La plantilla de la tarea añade cuatro APIs gratuitas y sin llave (Open Library, Wikipedia
-en español, mindicador.cl, feriados de Chile) con el patrón de código y el aviso de
-envolver siempre en `try / except`.
+| **1** | Configuración del entorno y verificación de credenciales | Pasos 1–3 |
+| | Agente simple: modelo + *system prompt* | Pasos 4 y 6 |
+| | Una herramienta simple (calculadora de multas) | Paso 5 |
+| | Pruebas con distintas consultas y lectura del razonamiento | Pasos 7–8 |
+| | *Ejercicio:* escribir `dias_de_atraso` y encadenarla | Paso 9 |
+| **2** | Segunda herramienta: **lectura de un documento** (reglamento) y **API externa** (Open Library) | Pasos 4–6 |
+| | Memoria conversacional | Paso 7 |
+| | Orquestación: **el loop del agente escrito a mano** | Paso 8 |
+| | Proyecto integrador: **asistente de consultas para la biblioteca** | Paso 9 |
+| | Cierre: revisión grupal de soluciones | Paso 10 |
 
 ## Decisiones de diseño
 
-**Modo simulado.** Los tres notebooks detectan si falta la llave de Groq y siguen
-funcionando con un agente de respaldo sin modelo de lenguaje. Nadie se queda mirando
-la pantalla mientras la clase avanza. Con ~80 personas creando cuentas a la vez, esto
-es lo que evita perder la hora.
-
-**Datos reales siempre que se pueda.** Un agente que devuelve un diccionario inventado no
-inspira a nadie. Cuando existe una API pública, la herramienta la llama de verdad.
-
-**Nivel introductorio real.** Todo el código está escrito y comentado. El trabajo del
-estudiante es ejecutarlo y cambiar palabras dentro. Cada bloque "tu turno" arranca con
-un ejemplo que **ya funciona**, para que modifiquen en vez de partir de cero.
-
-**Cada paso dice qué esperar.** Antes de ejecutar, el notebook adelanta qué debería
-aparecer en pantalla; si sale otra cosa, hay una tabla de "qué pasó / qué hacer" en el
-propio paso. Es lo que evita que alguien se quede atascado en silencio.
-
-**Dominio de biblioteca.** Coherente con quien organiza el taller y con los ejemplos del
-PPT teórico (`buscar_libro`, `reservar_sala`). La tarea, en cambio, es de dominio libre.
-
-**No se solapa con el ramo de Ingeniería de Soluciones con IA.** Comparte la base técnica
-(Groq, LangChain, mismos modelos) pero ningún ejercicio. La comparativa está en `docente/notas-tecnicas.md` §5.
-
----
+- **API actual de LangChain** (`create_agent`, 1.x), no la clásica: es la que encontrarán en la documentación hoy.
+- **Proveedor con respaldo automático:** Groq `gpt-oss-120b` → Groq `gpt-oss-20b` (cupo
+  independiente) → Gemini → modo simulado. Con ~80 personas creando cuentas, nadie se queda fuera.
+- **La traza muestra el razonamiento** (🧠) que expone gpt-oss, no solo las acciones.
+- **Ejercicios de código con comprobación automática**: el estudiante sabe al instante si su
+  herramienta cumple, y el docente circula donde hay ❌.
+- **Datos reales donde existe API** (Open Library). Préstamos y reglamento son **de ejemplo**,
+  y los notebooks lo dicen: no es el reglamento oficial de DUOC UC.
+- **Límites en tres capas** — instrucciones, `max_pasos` y validación en el código — con la
+  idea fuerza de las dos sesiones: *el agente propone, tu código dispone*.
 
 ## Verificación
 
-Los cuatro notebooks se ejecutaron **de principio a fin contra la API real de Groq**
-(LangChain 1.4.0, langchain-classic 1.0.8, langchain-groq 1.1.3, groq 0.37.1). Cero
-errores, y lo que se enseña ocurre de verdad:
+Los dos notebooks y la pauta se ejecutaron **de principio a fin contra la API real de Groq**
+el 14-oct-2026, también en **modo simulado** (sin llaves) y desde el zip de entrega en una
+carpeta limpia. El detalle de lo observado, y lo que queda sin comprobar (Gemini con llave
+real, ejecución dentro de Colab), está en `docente/notas-tecnicas.md` §5 y §6.
 
-| Qué se enseña | Qué hizo el agente en la prueba |
-|---|---|
-| El modelo solo no sabe la hora | *"No dispongo de acceso en tiempo real..."* |
-| Con herramienta sí responde | `Invoking: hora_actual` → *"Son las 00:04 del viernes 04-09-2026"* |
-| Elige entre varias herramientas | `Invoking: buscar_libro` con `{'titulo': 'Sapiens'}` |
-| **Encadena dos en una consulta** | `Invoking: buscar_libro` → `Invoking: salas_disponibles` |
-| Sin memoria olvida | *"Lo siento, pero no tengo acceso a tu nombre."* |
-| Con memoria recuerda | *"Te llamas Camila."* |
-| Memoria de 3 turnos | *"Te llamas Camila y el primer producto que preguntaste fue el café."* |
-| El límite del prompt frena | Pide reservar sin elegir sala → pregunta cuál, `RESERVAS` vacía |
-| La validación del código frena | `registrar_pedido(50)` → *"máximo 10 unidades"*, stock intacto |
+## Publicar
 
-Las dos presentaciones (36 diapositivas) se abrieron **en Microsoft PowerPoint** y se
-exportaron a PDF desde ahí: ninguna página en blanco y Montserrat se incrusta bien, así
-que se ven igual que la sesión teórica sin instalar nada. Además pasan el renderizador
-propio, que busca desbordes de texto, elementos que pisen el logo y glifos ausentes.
+`bash publicar.sh "mensaje"` sube la carpeta al repositorio público
+[Giocrisrai/taller-ia-agentes-biblioteca](https://github.com/Giocrisrai/taller-ia-agentes-biblioteca).
+Reemplaza los notebooks de septiembre en `main` (quedan en el historial de git).
+Los badges de Colab apuntan a esas rutas, así que **funcionan recién después de publicar**.
 
-### Lo que queda sin comprobar
-
-- **Los notebooks no se ejecutaron dentro de Colab**, sino en un entorno equivalente. El
-  código que difiere es el de `google.colab.userdata` para leer el Secret; el resto es
-  idéntico. Se comprueba en dos minutos abriendo el primero desde el badge.
-
-## Lo que tienes que decidir tú
-
-- [ ] **Dónde se entrega** el enlace de Colab (AVA, formulario, correo)
-- [ ] **Política de modo simulado** en la evaluación — hay una sugerida en la rúbrica;
-      anúnciala el lunes, no al corregir
-- [ ] Si corriges o no las 4 diapositivas del PPT teórico con código desactualizado
-- [ ] Si presentas desde **otro computador**, exporta las PPT a PDF antes o instala
-      Montserrat (`presentaciones/_generador/fuentes/`). En el tuyo no hace falta:
-      PowerPoint la resuelve solo (ver [presentaciones/LEEME.md](presentaciones/LEEME.md))
+> Las presentaciones de septiembre (`Taller_Practico_1/2.pptx`) **no corresponden** a este
+> contenido: el orden, las herramientas y la API cambiaron.
 
 ---
 
 ## Licencia
 
-Material educativo bajo **[Creative Commons Atribución 4.0 Internacional](LICENSE)**
-(CC BY 4.0). Puedes usarlo, adaptarlo y compartirlo libremente, incluso con fines
-comerciales, dando crédito a *Giocrisrai Godoy — Bibliotecas DUOC UC*.
-
-Quedan fuera de esa licencia los logotipos institucionales de DUOC UC y la fuente
-Montserrat, que tiene la suya propia (SIL OFL 1.1).
+Material educativo bajo **[CC BY 4.0](LICENSE)**: puedes usarlo, adaptarlo y compartirlo,
+dando crédito a *Giocrisrai Godoy — Bibliotecas DUOC UC*. Los logotipos institucionales de
+DUOC UC quedan fuera de esa licencia.
